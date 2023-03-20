@@ -21,7 +21,6 @@ namespace WpfAppPractwork1.Pages
     public partial class PagePW7 : Page
     {
         int N;
-
         int[] array;
         public PagePW7()
         {
@@ -32,35 +31,33 @@ namespace WpfAppPractwork1.Pages
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-
         private void BtnCreateArray_Click(object sender, RoutedEventArgs e)
         {
             N = int.Parse(TxtN.Text);
 
-            array = new int[N];
+            array= new int[N];
             Random rand = new Random();
-            for (int i = 0; i < N; i++)
+            for(int i = 0; i<N; i++) 
             {
-                array[i] = rand.Next(-1000, 1000);
-                LstArray1.Items.Add($"№{i} {array[i]}");
+                array[i] = rand.Next(-1000,1000);
+                LstArray.Items.Add($"#{i}  {array[i]}");
             }
         }
+        /// <summary>
+        /// Задание по варианту 1
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void BtnSolveArray_Click(object sender, RoutedEventArgs e)
         {
-            int sum = 0;
+            int max = array.Max();
+            int numberMin = Array.IndexOf(array, max);
+            array[numberMin] = array[0];
+            array[0] = max;
             for (int i = 0; i < N; i++)
             {
-                if (array[i] < 0)
-                {
-                    break;
-                }
-                else
-                {
-                    sum=sum + array[i];
-                }
-              
-            } 
-            LstArray2.Items.Add($"Сумма до 1го отрицательного {sum}");
+                LstArrayNew.Items.Add($"#{i}  {array[i]}");
+            }
         }
     }
 }

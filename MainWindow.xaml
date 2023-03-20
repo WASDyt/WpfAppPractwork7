@@ -20,14 +20,14 @@
                        Height="30"
                        FontSize="20"
                        Margin="5"/>
-            <TextBlock Text="Студент Кузьмина Е.Е."
+            <TextBlock Text="Студент Барыбин Д.А"
                        TextAlignment="Center"
                        VerticalAlignment="Center"
                        Width="200"
                        Height="30"
                        FontSize="20"
                        Margin="5"/>
-            <TextBlock Text="Вариант №00"
+            <TextBlock Text="Вариант №01"
                        TextAlignment="Center"
                        VerticalAlignment="Center"
                        Width="150"
